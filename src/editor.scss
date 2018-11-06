@@ -1,0 +1,17 @@
+/**
+ * Editor Styles
+ */
+
+@import '../node_modules/codemirror/lib/codemirror';
+@import '../node_modules/codemirror/theme/material';
+
+.components-button.components-icon-button svg.sbb_artdirector_button,
+.components-button.components-icon-button svg.sbb_artdirector_button *,
+.components-button.components-icon-button.is-toggled svg.sbb_artdirector_button,
+.components-button.components-icon-button.is-toggled svg.sbb_artdirector_button * {
+	stroke: none !important;
+}
+
+.sortabrilliant-artdirector .CodeMirror {
+	height: 469px;
+}
