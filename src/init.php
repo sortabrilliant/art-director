@@ -34,7 +34,7 @@ add_action( 'enqueue_block_editor_assets', 'sbb_artdirector_editor_assets' );
 function sbb_artdirector_register_meta() {
 	register_meta(
 		'post',
-		'_sbb_artdirector_field',
+		'_sbb_artdirector_css_field',
 		[
 			'type'         => 'string',
 			'single'       => true,
@@ -68,3 +68,18 @@ add_action( 'rest_api_init', 'sbb_artdirector_api_posts_meta_field' );
 function sbb_artdirector_update_callback( $data ) {
 	return update_post_meta( $data['id'], $data['key'], $data['value'] );
 }
+
+function sbb_artdirector_output_code() {
+	if ( ! is_singular() ) {
+		return;
+	}
+
+	$css = get_post_meta( get_queried_object_id(), '_sbb_artdirector_css_field', true );
+
+	if ( empty( $css ) ) {
+		return;
+	}
+
+	echo '<style type="text/css">/* HERE */' . $css . '</style>'; // phpcs:ignore
+}
+add_action( 'wp_footer', 'sbb_artdirector_output_code' );
