@@ -125,7 +125,10 @@ class SBB_ArtDirector extends Component {
                                         value={this.state.value}
                                         onBeforeChange={this.handleChange}
                                         options={ {
+                                            lineWrapping: true,
                                             lineNumbers: true,
+                                            indentUnit: 2,
+                                            tabSize: 2,
                                             mode: 'css',
                                         } }
                                         editorDidMount={ editor => { this.codemirror = editor } }
