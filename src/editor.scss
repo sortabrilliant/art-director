@@ -14,3 +14,55 @@
 .sortabrilliant-artdirector .CodeMirror {
 	height: 469px;
 }
+
+.sortabrilliant-artdirector-drop-zone-status {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.3s opacity, 0.3s background-color, 0s visibility 0.3s;
+	background: rgba(0,113,161,0.8);
+	border: 2px solid rgb(0,113,161);
+	border-radius: 2px;
+
+	&.is-active {
+		opacity: 1;
+		visibility: visible;
+		transition: 0.3s opacity, 0.3s background-color;
+	}
+}
+
+.sortabrilliant-artdirector-drop-zone-status__content {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	z-index: 110;
+	transform: translateY(-50%);
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	transition: transform 0.2s ease-in-out;
+
+	display: flex;
+	justify-content: center;
+
+	.components-spinner {
+		float: none;
+		margin: 0 11px;
+		background-color: #fff;
+
+		&::before {
+			background-color: rgba(0,113,161,0.8);
+		}
+	}
+}
+
+.sortabrilliant-artdirector-drop-zone-status__content-icon,
+.sortabrilliant-artdirector-drop-zone-status__content-text {
+	display: block;
+}

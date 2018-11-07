@@ -105,10 +105,6 @@ class SBB_ArtDirector extends Component {
                 >
                     <PanelBody className="sortabrilliant-artdirector">
 
-                        { this.state.isUploading &&
-                            <p>{ __( 'Uploading files...' ) } <Spinner /></p>
-                        }
-
                         { this.state.errorMessage &&
                             <p>{ this.state.errorMessage }</p>
                         }
@@ -120,6 +116,15 @@ class SBB_ArtDirector extends Component {
                             <DropZoneProvider>
                                 <div style={ { position:"relative" } } >
                                     <DropZone onFilesDrop={ this.addFiles } />
+
+                                    { this.state.isUploading &&
+                                        <div className="sortabrilliant-artdirector-drop-zone-status is-active">
+                                            <div className="sortabrilliant-artdirector-drop-zone-status__content">
+                                                <Spinner />
+                                                <span className="sortabrilliant-artdirector-drop-zone-status__content-text">{ __( 'Uploading...' ) }</span>
+                                            </div>
+                                        </div>
+                                    }
 
                                     <CodeMirror
                                         value={this.state.value}
