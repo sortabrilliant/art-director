@@ -89,8 +89,7 @@ class SBB_ArtDirector extends Component {
                     errorMessage: error.message,
                 } );
             },
-        } )
-        .then();
+        } );
     }
 
     render() {
