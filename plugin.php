@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Art Director
- * Plugin URI: https://sortabrilliant.com/art-director/
- * Description: Keep notes where they're needed most.
+ * Plugin URI: https://sortabrilliant.com/artdirector/
+ * Description: Add page specific CSS to turn your content from blah into ahhh.
  * Author: sorta brilliant
  * Author URI: https://sortabrilliant.com
  * Version: 0.0.1
