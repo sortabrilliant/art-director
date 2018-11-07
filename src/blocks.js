@@ -127,7 +127,6 @@ class SBB_ArtDirector extends Component {
                                         options={ {
                                             lineNumbers: true,
                                             mode: 'css',
-                                            theme: 'material',
                                         } }
                                         editorDidMount={ editor => { this.codemirror = editor } }
                                     />
