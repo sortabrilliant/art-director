@@ -114,8 +114,8 @@ class SBB_ArtDirector extends Component {
                         }
 
                         <BaseControl id="sortabrilliant-artdirector-editor"
-                            label={ __( 'Add your custom CSS styles' ) }
-                            help={ __( 'You can drag and drop files onto the code editor. The URL of the uploaded file will be inserted at your cursor.' ) }>
+                            label={ __( 'Add page specific CSS to turn your content from blah into ahhh.' ) }
+                            help={ __( 'Upload a file by dropping it on the code editor. The file url will be inserted wherever your cursor is.' ) }>
                             
                             <DropZoneProvider>
                                 <div style={ { position:"relative" } } >
